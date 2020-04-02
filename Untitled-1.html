@@ -1,0 +1,156 @@
+<style> 
+  html, body {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+#title{
+  font-size: 4vw;
+}
+
+#description{
+  font-size: 1.2vw;
+  font-weight: bold;
+  font-family: sans-serif;
+
+}
+
+#form-outer {
+  background-color: rgb(250, 250, 250);
+  margin: auto;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 900px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  padding: 5px;
+  width: 50%;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.rightTab {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+.input-field {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.dropdown {
+  height: 40px;
+  width: 140px;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 5px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+
+#submit {
+  background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+  margin: auto;
+}
+  
+</style>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<h1 id="title"> Survey Form </h1>
+<div id="form-outer">
+  <p id="description"> This form is for website testers , Tell us how can we improve</p>
+  <form id="survey-form" action="https://crossorigin.me/https://freecodecamp.com">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name"> Name : </label></div>
+        <div class="rightTab">
+          <input type="text"  class="input-field" id="name" name="name" placeholder="Enter your name" required>
+      </div></div>
+          <div class="rowTab">
+            <div class="labels">
+              <label id="email-label" for="email"> Email : </label></div>
+            <div class="rightTab">
+              <input type="email"  class="input-field" id="email" name="email" placeholder="enter your email" required></div></div>
+     <div class="rowTab">
+            <div class="labels">
+              <label id="number-label" for="Number"> Age : </label></div>
+      <div class="rightTab"> <input type="number" id="number"  class="input-field" name="age" min="1" max="125" placeholder="enter your age"></div></div>
+ <div class="rowTab">
+   <div class="labels">
+     <label for="currentpos">Which option describes your current role?</label></div>
+ <div class="rightTab">  <select id="dropdown" name="currentpos" class="dropdown">
+     <option disabled value>select an option</option>
+   <option value="student">Student</option>
+     <option value="job">Web developer</option>
+   <option value="job">Web designer
+   </option>
+   <option value="prefer not to say">prefer not to say</option>
+   <option value="others">others</option>
+   </select></div></div>
+   <div class="rowTab">
+     <div class="labels">
+       <label for="user-rating">How likely is that you will recommend out site to others?</label>
+       </div>
+     <div class="rightTab"> <ul style="list-style-type: none">           <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+  <div class="rowTab">
+    <div class="labels">
+      <label for="suggestion"> What are the things that we should improve in our site<br> (click all that apply): </label></div>
+    <div class="rightTab">
+      <ul id="suggestion" style="list-style: none">
+        <li class="checkbox"><label><input name="suggest"  value="1" type="checkbox" class="userRatings">Website Opening time</label></li>
+  <li class="checkbox"><label><input name="suggest" value="2" type="checkbox" class="userRatings">Products listings and specification</label></li>
+        <li class="checkbox"><label><input name="suggest" value="3" type="checkbox" class="userRatings">Site optimization</label></li>
+        <li class="checkbox"><label><input name="suggest" value="4" type="checkbox" class="userRatings">support</label></li>
+      </ul>
+        </div></div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">Any comments?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" placeholder="Enter your comments here..." style="height:50px;resize:vertical" name="comment"> </textarea>
+  
+        <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+  
+  
+
